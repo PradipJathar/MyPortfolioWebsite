@@ -183,10 +183,15 @@
     <Compile Include="Migrations\202407201624302_InitialMigration.Designer.cs">
       <DependentUpon>202407201624302_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407230507164_CreateBasicInfoTable.cs" />
+    <Compile Include="Migrations\202407230507164_CreateBasicInfoTable.designer.cs">
+      <DependentUpon>202407230507164_CreateBasicInfoTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\BasicInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
@@ -375,6 +380,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202407201624302_InitialMigration.resx">
       <DependentUpon>202407201624302_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407230507164_CreateBasicInfoTable.resx">
+      <DependentUpon>202407230507164_CreateBasicInfoTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
