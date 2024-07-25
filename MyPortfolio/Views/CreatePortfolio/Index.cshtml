@@ -1,4 +1,4 @@
-﻿
+﻿@model MyPortfolio.ViewModels.CreatePortfolioViewModel
 @{
     ViewBag.Title = "Create Portfolio";
 }
@@ -24,36 +24,24 @@
             <tr>
                 <td class="text-left">Basic Details</td>
                 <td>
-                    <span class="badge bg-warning" style="font-size:1em;">Incompleted</span>                
-                    <span class="badge bg-success" style="font-size:1em; color:white;">Completed</span>                
+                    @if (Model.BasicInfoId == Guid.Empty)
+                    {
+                        <span class="badge bg-warning" style="font-size:1em;">Incompleted</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success" style="font-size:1em; color:white;">Completed</span>
+                    }
                 </td>
                 <td>
-                    <button class="btn btn-primary">Add</button>
-                    <button class="btn btn-success">Edit</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="text-left">Eduction</td>
-                <td>
-                    <span class="badge bg-warning" style="font-size:1em;">Incompleted</span>
-                    <span class="badge bg-success" style="font-size:1em; color:white;">Completed</span>
-                </td>
-                <td>
-                    <button class="btn btn-primary">Add</button>
-                    <button class="btn btn-success">Edit</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="text-left">Experience</td>
-                <td>
-                    <span class="badge bg-warning" style="font-size:1em;">Incompleted</span>
-                    <span class="badge bg-success" style="font-size:1em; color:white;">Completed</span>
-                </td>
-                <td>
-                    <button class="btn btn-primary">Add</button>
-                    <button class="btn btn-success">Edit</button>
+                    @if (Model.BasicInfoId == Guid.Empty)
+                    {
+                        @Html.ActionLink("Add", "SaveBasicInfo", "MyBasicInfo", null, new { @class = "btn btn-primary" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Edit", "SaveBasicInfo", "MyBasicInfo", new { id = Model.BasicInfoId }, new { @class = "btn btn-success" })
+                    }
                 </td>
             </tr>
 
