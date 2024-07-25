@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using MyPortfolio.CommonFiles;
+using MyPortfolio.Models;
+using MyPortfolio.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,12 +10,18 @@ using System.Web.Mvc;
 
 namespace MyPortfolio.Controllers
 {
+    [Authorize]
     public class CreatePortfolioController : Controller
     {
-        // GET: CreatePortfolio
+        ApplicationDbContext db = new ApplicationDbContext();        
+
         public ActionResult Index()
         {
-            return View();
+            CreatePortfolioViewModel model = new CreatePortfolioViewModel();
+
+            model.Init(db, Helpers.GetPortfolioUserId(User));
+
+            return View(model);
         }
     }
 }
