@@ -25,7 +25,7 @@ namespace MyPortfolio.Models
         public string Designation { get; set; }
 
         [Required]
-        [StringLength(15, ErrorMessage = "Phone number must be no more than {0} digits.")]
+        [StringLength(15, ErrorMessage = "Phone number must be no more than {1} digits.")]
         [Phone]
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
