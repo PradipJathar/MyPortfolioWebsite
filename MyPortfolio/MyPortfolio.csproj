@@ -197,6 +197,10 @@
     <Compile Include="Migrations\202407240503527_RemovePluralizingTableNameConvention.designer.cs">
       <DependentUpon>202407240503527_RemovePluralizingTableNameConvention.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407261547417_AddProfileColumnAndMakeBirthdateNullableInBasicInfoTable.cs" />
+    <Compile Include="Migrations\202407261547417_AddProfileColumnAndMakeBirthdateNullableInBasicInfoTable.designer.cs">
+      <DependentUpon>202407261547417_AddProfileColumnAndMakeBirthdateNullableInBasicInfoTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationDbInitializer.cs" />
@@ -402,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407240503527_RemovePluralizingTableNameConvention.resx">
       <DependentUpon>202407240503527_RemovePluralizingTableNameConvention.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407261547417_AddProfileColumnAndMakeBirthdateNullableInBasicInfoTable.resx">
+      <DependentUpon>202407261547417_AddProfileColumnAndMakeBirthdateNullableInBasicInfoTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
