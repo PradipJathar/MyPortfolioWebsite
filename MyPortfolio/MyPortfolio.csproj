@@ -178,6 +178,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MyBasicInfoController.cs" />
+    <Compile Include="Controllers\MyEducationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -208,6 +209,10 @@
     <Compile Include="Migrations\202407280923281_AddEducationTable.cs" />
     <Compile Include="Migrations\202407280923281_AddEducationTable.designer.cs">
       <DependentUpon>202407280923281_AddEducationTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407281042136_MakeNumberDatatypesOfEducationTableNullabe.cs" />
+    <Compile Include="Migrations\202407281042136_MakeNumberDatatypesOfEducationTableNullabe.designer.cs">
+      <DependentUpon>202407281042136_MakeNumberDatatypesOfEducationTableNullabe.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -366,6 +371,7 @@
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\CreatePortfolio\Index.cshtml" />
     <Content Include="Views\MyBasicInfo\SaveBasicInfo.cshtml" />
+    <Content Include="Views\MyEducation\SaveEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -424,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407280923281_AddEducationTable.resx">
       <DependentUpon>202407280923281_AddEducationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407281042136_MakeNumberDatatypesOfEducationTableNullabe.resx">
+      <DependentUpon>202407281042136_MakeNumberDatatypesOfEducationTableNullabe.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

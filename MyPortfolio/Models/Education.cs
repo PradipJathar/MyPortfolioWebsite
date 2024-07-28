@@ -24,15 +24,15 @@ namespace MyPortfolio.Models
 
         [Range(0.1, 100)]
         [Display(Name = "Percentage/CGPA")]
-        public double PercentageOrCGPA { get; set; }
+        public double? PercentageOrCGPA { get; set; }
 
         [Required]
         [Range(1900, 2100)]
         [Display(Name = "Start Year")]
-        public int StartYear { get; set; }
+        public int? StartYear { get; set; }
 
         [Range(1900, 2100)]
         [Display(Name = "Passing Year")]
-        public int PassingYear { get; set; }
+        public int? PassingYear { get; set; }
     }
 }
