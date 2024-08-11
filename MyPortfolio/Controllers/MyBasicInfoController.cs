@@ -59,6 +59,20 @@ namespace MyPortfolio.Controllers
         }
 
 
+        public ActionResult DeleteBasicInfo(Guid basicInfoId)
+        {
+            BasicInfo basicInfo = db.BasicInfo.Where(e => e.BasicInfoId == basicInfoId).FirstOrDefault();
+
+            if (basicInfo != null)
+            {
+                db.BasicInfo.Remove(basicInfo);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index", "CreatePortfolio");
+        }
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
